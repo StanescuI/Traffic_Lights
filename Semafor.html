@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #colorButton {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button id="colorButton" onclick="changeColor()">Click me!</button>
+    <script>
+        var colors = ['red', 'yellow', 'green'];
+        var currentColorIndex = 0;
+
+        function changeColor() {
+            var button = document.getElementById('colorButton');
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+            button.style.backgroundColor = colors[currentColorIndex];
+        }
+        setInterval(changeColor, 10000);
+    </script>
+</body>
+</html>
