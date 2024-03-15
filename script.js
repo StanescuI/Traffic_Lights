@@ -1,8 +1,8 @@
-var colors = ['red', 'yellow', 'green'];
-var currentColorIndex = 0;
+let colors = ['red', 'yellow', 'green'];
+let currentColorIndex = 0;
 
 function changeColor() {
-    var button = document.getElementById('colorButton');
+    let button = document.getElementById('colorButton');
     currentColorIndex = (currentColorIndex + 1) % colors.length;
     button.style.backgroundColor = colors[currentColorIndex];
  }
